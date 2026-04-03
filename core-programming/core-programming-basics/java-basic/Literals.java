@@ -19,6 +19,7 @@ public class Literals {
 
         // Floating-Point Literal
         float floatVal = 1.23f ;
+        float floatVal1 = 2 ; // 2.0
         double doubleVal = 1.23; // or 1.23d or 1.23D
 
         double d1 = 123.4;
