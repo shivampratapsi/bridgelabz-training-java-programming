@@ -78,7 +78,8 @@ public class Variables {
         int[] arr2 = new int[3] ;
         
         String str1 = "string" ;
-core-programming-basics\java-basic\Variables.java
+        System.out.println(str1);
+
 
         
 
