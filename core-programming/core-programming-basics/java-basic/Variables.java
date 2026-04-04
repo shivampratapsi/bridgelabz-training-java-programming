@@ -37,6 +37,9 @@ public class Variables {
         // primitives type variable are stored in stack memory
         // 1.byte
         byte b = 127; // This will give error because byte range is -128 to 127
+        byte ii = 1;
+        byte jj = 2;
+        byte k = (byte) (ii + jj);
         // 2.short
         short s = 32767;
         // 3.int
@@ -75,7 +78,12 @@ public class Variables {
         int[] arr2 = new int[3];
 
         String str1 = "string";
-        System.out.println(str1);
+
+        // var is used to declare local variable
+        // compiler decide what is the real type of the variable you create
+        var message = "Hello world!";
+        var num = 1;
+        System.out.println(((Object) num).getClass().getSimpleName()); // Integer
 
     }
 }
