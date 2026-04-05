@@ -11,6 +11,7 @@ public class BasicIO {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Taking input through Scanner class :");
         String a = scanner.next(); // next function skip the blank line
+        System.out.println(a);
 
         // Using System.console
         System.out.println("Taking input through console ");
@@ -25,6 +26,7 @@ public class BasicIO {
             String input1 = br.readLine(); // it reads full line
             int input = br.read(); // it read only single character
             System.out.println(input);
+            System.out.println(input1);
         } catch (IOException v) {
             System.out.println("IO exception occur");
         } finally {
@@ -32,7 +34,7 @@ public class BasicIO {
         }
         //only one at a time
         // br.close();
-        // scanner.close();
+        scanner.close();
 
     }
 
