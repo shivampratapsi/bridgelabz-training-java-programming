@@ -6,7 +6,6 @@ public class HeightConversion {
         float heightInCm = scanner.nextFloat();
         System.out.println("Your Height in cm is " + heightInCm + " while in feet is " + (heightInCm / 30.68)
                 + "and inches is " + (heightInCm / 2.54));
-                
 
     }
 }
