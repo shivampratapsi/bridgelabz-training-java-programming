@@ -103,7 +103,7 @@ public class Operators {
         System.out.println(Float.NaN <= Float.NaN); // false
         System.out.println("==========================");
         System.out.println(Double.NaN != Double.NaN); // true
-        System.out.println(2.0f != 2.0d); // true only when both have .0
+        System.out.println(2.0f != 2.0d); // false 
         System.out.println(2.0 == 2L); // true
 
         System.out.println(-0.0 == 0.0); // true Positive zero and negative zero are considered equal
