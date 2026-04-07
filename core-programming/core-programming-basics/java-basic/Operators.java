@@ -103,7 +103,7 @@ public class Operators {
         System.out.println(Float.NaN <= Float.NaN); // false
         System.out.println("==========================");
         System.out.println(Double.NaN != Double.NaN); // true
-        System.out.println(2.0f != 2.0d); // false 
+        System.out.println(2.0f != 2.0d); // false
         System.out.println(2.0 == 2L); // true
 
         System.out.println(-0.0 == 0.0); // true Positive zero and negative zero are considered equal
@@ -116,7 +116,8 @@ public class Operators {
         System.out.println(2.0d == 2.f && 2.1 == 2.1); // (true) && (true)
 
         int lo = 1, lo2 = 2;
-        // System.out.println((lo++ == lo2) && (lo++ == ++lo2) ); // false(1==2) && (2==3)
+        // System.out.println((lo++ == lo2) && (lo++ == ++lo2) ); // false(1==2) &&
+        // (2==3)
         System.out.println((++lo == lo2) || (++lo == ++lo2)); // false(1==2) && (2==3) lo =2 , lo2 =2
 
         System.out.println(lo);
@@ -128,14 +129,24 @@ public class Operators {
         System.out.println(2 ^ 1); // 3
 
         // Ternary Operator
-        // The conditional operator is syntactically right-associative (it groups right-to-left). 
-        // Thus, a?b:c?d:e?f:g means the  same as a?b:(c?d:(e?f:g))
+        // The conditional operator is syntactically right-associative (it groups
+        // right-to-left).
+        // Thus, a?b:c?d:e?f:g means the same as a?b:(c?d:(e?f:g))
 
         int terOp = true ? 1 : 2;
-        int complexTerOp = ( false ? 1: (false? 3: (true? 5:6) ) ); // 5
+        int complexTerOp = (false ? 1 : (false ? 3 : (true ? 5 : 6))); // 5
         System.out.println(complexTerOp);
 
-        //Shift Operator
+        // Shift Operator >> , <<
+        int leftShift1 = 3 << 1; // 3* (2^1)=6
+        int leftShift2 = leftShift1++ << 1; // 6*(2^1)=12
+        int leftShift3 = ++leftShift1 << 1; // 8*(2^1)=16
+
+        float rightShift1 = 2 >> 2; // 2/ (2*2) =0
+        int rightShift2 = -8 >> 4; // -8 / (2*4) = -1
+
+        int tripleRightShift1 = -1 >>> 1; // 2147483647
+        int tripleRightShift2 = 128 >>> 3;// 16
 
     }
 }
