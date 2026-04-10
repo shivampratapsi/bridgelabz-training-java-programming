@@ -47,3 +47,5 @@ javac FileName.java
 java FileName
 
 🎯 Learning Outcome • Solid Java Basics • Sharper Logic • Better understanding of operators, loops, conditions, and functions • Confidence in creating beginner-level Java applications • Ability to organize Java programs using proper folder structure • Clean Habits
+
+Author: Shivam pratap singh
