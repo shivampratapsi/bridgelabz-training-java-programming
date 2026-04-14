@@ -10,7 +10,7 @@ public class SumNumbers {
             if (input <= 0) {
                 break;
             }
-            total += input;
+            total += input; 
         }
         System.out.printf("Total is %d", total);
         scanner.close();
