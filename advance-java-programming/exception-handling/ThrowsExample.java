@@ -30,7 +30,7 @@ public class ThrowsExample {
         try {
             int a = 1;
             System.out.println("In try block");
-            // throw new ArithmeticException();
+            throw new ArithmeticException();
         }
         // finally{} // blank finally
         finally {
