@@ -12,13 +12,12 @@ public class GenericMethods<T extends Number> { // now we can only make use of b
     }
 
     // using <?> can only read elements
-    static void print(List<?> list) {// This list could contain anything—Integers, Strings, Custom Objects, etc.
-
+    static void print(List<?> list) {
+        // This list could contain anything—Integers, Strings, Custom Objects, etc.
         System.out.println("Using <?> in print method");
-
-        for (Object i : list) {// can't use bcz compiler doesn't guarantee that element is String
+        for (Object i : list) {// can't use Number, String bcz compiler doesn't guarantee that element is String
             System.out.print(i + "\t");
-        }
+        }       
         System.out.println();
     }
 
@@ -69,8 +68,24 @@ public class GenericMethods<T extends Number> { // now we can only make use of b
         list.add(a);
 
     }
+    /*
+     * Wildcards are of 3 types <?> unbounded wildcards, <?extends T> upper bound,<?
+     * super T> lower bound
+     * we can use PECS means producer extends , consumer super
+     * Generics are invarient means Integer is subclass of Number , but
+     * List<Integer> is not subclass of List<Number>
+     * means if the method is process(List <Number> list){} then we can't pass
+     * another list of type List<Integer> to method, but we can pass Integer, FLoat,
+     * Short ,Double, Byte value to it
+     * compiler prevents this otherwise someone could pass <Double> also
+     * so upper bound wildcard solve above problem by using <? extends Number>
+     * only use when we read data from collection
+     * 
+     * By using <?> it means we can only read or get from list
+     */
 
     public static void main(String[] args) {
+
         List<Number> numberList = new ArrayList<>();
         List<Integer> integerList = new ArrayList<>();
         // addToList(numberList);
@@ -99,25 +114,8 @@ public class GenericMethods<T extends Number> { // now we can only make use of b
         GenericMethods<Short> gm3 = new GenericMethods<>();
         GenericMethods<Float> gm4 = new GenericMethods<>();
 
-        List<String> lst = Arrays.asList("a", "b");
-        System.out.println(lst);
-
-        // Wildcards are of 3 types <?> unbounded wildcards, <?extends T> upper bound,
-        // <? super T> lower
-        // bound
-        // we can use PECS means producer extends , consumer super
-        // Generics are invarient means Integer is subclass of Number , but
-        // List<Integer> is not subclass of List<Number>
-        // means if the methods is process(List <Number> list){} then we can't pass
-        // another list of type List<Integer> to method, but we can pass Integer, FLoat,
-        // Short ,Double, Byte value to it
-        // compiler prevents this otherwise someone could pass <Double> also
-        // so upper bound wildcard solve above problem by using <? extends Number>
-        // only use when we read data from collection
-
-        // By using <?> it means we can only read from list
-        //
-
+        List<String> lst = Arrays.asList("a", "b", "c", "d");
+        // System.out.println(lst);
         GenericMethods.print(lst);
 
     }
